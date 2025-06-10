@@ -1,0 +1,17 @@
+[
+  {
+    "title": "GitHub Profile Page",
+    "description": "A clean and professional personal GitHub portfolio site.",
+    "link": "https://github.com/mina2357/mina2357.github.io"
+  },
+  {
+    "title": "Open Source Tool",
+    "description": "A CLI-based tool for automating common developer tasks.",
+    "link": "https://github.com/mina2357/dev-tools"
+  },
+  {
+    "title": "Documentation Generator",
+    "description": "Generate beautiful developer docs from markdown files.",
+    "link": "https://github.com/mina2357/docgen"
+  }
+]

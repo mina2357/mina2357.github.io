@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mina | Home</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Mina's Developer Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>About This Site</h2>
+      <p>
+        This website is built for developers. It showcases tools and open-source projects created by Mina.
+        Explore projects, access source code, and download useful tools.
+      </p>
+    </section>
+
+    <section>
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="https://github.com/mina2357" target="_blank">Mina's GitHub</a></li>
+        <li><a href="projects.html">Explore Projects</a></li>
+        <li><a href="downloads.html">Visit Downloads</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mina. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
