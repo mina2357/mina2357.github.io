@@ -70,12 +70,6 @@
       border: none;
       cursor: pointer;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
     .social {
       padding: 1rem;
       display: flex;
@@ -87,17 +81,57 @@
       color: #000;
       font-weight: 600;
     }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* --- GitHub Section --- */
+    .gh-section {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: #1f1f1f;
+      color: #fff;
+    }
+    .gh-card {
+      background-color: #292929;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .gh-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .gh-stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>My GitHub Project</h1>
-  </header>  <div class="hero">
+  </header>
+
+  <div class="hero">
     <h2>Something Amazing is Coming!</h2>
     <p>This project brings cutting-edge solutions for developers and tech enthusiasts. Stay tuned for the launch!</p>
-  </div>  <div class="countdown" id="countdown">
+  </div>
+
+  <div class="countdown" id="countdown">
     00:00:00:00
-  </div>  <section class="features">
+  </div>
+
+  <section class="features">
     <div class="feature">
       <h3>Open Source</h3>
       <p>Fully open and free to use under MIT license.</p>
@@ -110,18 +144,39 @@
       <h3>Easy to Use</h3>
       <p>Simple setup and great developer experience.</p>
     </div>
-  </section>  <section class="subscribe">
+  </section>
+
+  <!-- GitHub Section -->
+  <section class="gh-section">
+    <div class="gh-card">
+      <img id="gh-avatar" class="gh-avatar" src="" alt="GitHub Avatar">
+      <h2 id="gh-name">Loading...</h2>
+      <p id="gh-bio">Loading bio...</p>
+      <div class="gh-stats">
+        <span id="gh-repos">Repos: --</span>
+        <span id="gh-followers">Followers: --</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe">
     <h2>Be the First to Know</h2>
     <p>Subscribe to get launch updates directly to your inbox.</p>
     <input type="email" placeholder="Enter your email">
     <button>Subscribe</button>
-  </section>  <div class="social">
+  </section>
+
+  <div class="social">
     <a href="#">GitHub</a>
     <a href="#">Twitter</a>
     <a href="#">Discord</a>
-  </div>  <footer>
+  </div>
+
+  <footer>
     <p>&copy; 2025 My GitHub Project. All rights reserved.</p>
-  </footer>  <script>
+  </footer>
+
+  <script>
     // Countdown Logic
     const countdownEl = document.getElementById("countdown");
     const launchDate = new Date("2025-12-01T00:00:00").getTime();
@@ -134,5 +189,18 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
       countdownEl.innerHTML = `${days}:${hours}:${minutes}:${seconds}`;
     }, 1000);
-  </script></body>
+
+    // GitHub API Fetch
+    const username = "codeartisan-dev"; // غيّره لاسم مستخدمك
+    fetch(`https://api.github.com/users/${username}`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("gh-avatar").src = data.avatar_url;
+        document.getElementById("gh-name").textContent = data.name || data.login;
+        document.getElementById("gh-bio").textContent = data.bio || "No bio available.";
+        document.getElementById("gh-repos").textContent = `Repos: ${data.public_repos}`;
+        document.getElementById("gh-followers").textContent = `Followers: ${data.followers}`;
+      });
+  </script>
+</body>
 </html>
