@@ -2,135 +2,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My GitHub Project</title>
+  <title>Mina | GitHub Projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background-color: #fff;
-      color: #000;
-      line-height: 1.6;
-    }
-    header {
-      padding: 1.5rem;
-      text-align: center;
-      border-bottom: 1px solid #eee;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 800;
-    }
-    .hero {
-      padding: 2rem;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 3rem;
-    }
-    .feature {
-      padding: 1rem;
-      background: #f7f7f7;
-      border-radius: 10px;
-    }
-    .countdown {
-      text-align: center;
-      padding: 2rem;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .subscribe {
-      padding: 3rem;
-      text-align: center;
-      background: #f2f2f2;
-    }
-    .subscribe input[type="email"] {
-      padding: 0.5rem;
-      width: 250px;
-      margin-right: 1rem;
-    }
-    .subscribe button {
-      padding: 0.5rem 1rem;
-      background: black;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    .social {
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-    .social a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 600;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    /* --- GitHub Section --- */
-    .gh-section {
-      padding: 3rem 1rem;
-      text-align: center;
-      background: #1f1f1f;
-      color: #fff;
-    }
-    .gh-card {
-      background-color: #292929;
-      padding: 2rem;
-      border-radius: 15px;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    .gh-avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    .gh-stats {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background-color: #fff; color: #000; line-height: 1.6; }
+    header { padding: 1.5rem; text-align: center; border-bottom: 1px solid #eee; }
+    header h1 { font-size: 3rem; font-weight: 800; }
+    .hero { padding: 2rem; text-align: center; }
+    .hero h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 3rem; }
+    .feature { padding: 1rem; background: #f7f7f7; border-radius: 10px; }
+    .countdown { text-align: center; padding: 2rem; font-size: 2rem; font-weight: bold; }
+    .subscribe { padding: 3rem; text-align: center; background: #f2f2f2; }
+    .subscribe input[type="email"] { padding: 0.5rem; width: 250px; margin-right: 1rem; }
+    .subscribe button { padding: 0.5rem 1rem; background: black; color: white; border: none; cursor: pointer; }
+    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; }
+    .social { padding: 1rem; display: flex; justify-content: center; gap: 1.5rem; }
+    .social a { text-decoration: none; color: #000; font-weight: 600; }
   </style>
 </head>
 <body>
   <header>
-    <h1>My GitHub Project</h1>
+    <h1>Mina Dev Projects</h1>
   </header>
-
   <div class="hero">
     <h2>Something Amazing is Coming!</h2>
     <p>This project brings cutting-edge solutions for developers and tech enthusiasts. Stay tuned for the launch!</p>
   </div>
-
-  <div class="countdown" id="countdown">
-    00:00:00:00
-  </div>
-
+  <div class="countdown" id="countdown">00:00:00:00</div>
   <section class="features">
     <div class="feature">
       <h3>Open Source</h3>
@@ -145,38 +46,22 @@
       <p>Simple setup and great developer experience.</p>
     </div>
   </section>
-
-  <!-- GitHub Section -->
-  <section class="gh-section">
-    <div class="gh-card">
-      <img id="gh-avatar" class="gh-avatar" src="" alt="GitHub Avatar">
-      <h2 id="gh-name">Loading...</h2>
-      <p id="gh-bio">Loading bio...</p>
-      <div class="gh-stats">
-        <span id="gh-repos">Repos: --</span>
-        <span id="gh-followers">Followers: --</span>
-      </div>
-    </div>
-  </section>
-
   <section class="subscribe">
     <h2>Be the First to Know</h2>
     <p>Subscribe to get launch updates directly to your inbox.</p>
     <input type="email" placeholder="Enter your email">
     <button>Subscribe</button>
-  </section>
-
-  <div class="social">
+  </section>  <!-- Repository Cards -->  <section id="repo-section" style="max-width:800px; margin:2rem auto; padding:0 1rem;">
+    <h2>My GitHub Projects</h2>
+    <div id="repo-container" style="display:grid; gap:1rem; grid-template-columns:auto-fit; grid-auto-flow: dense; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));"></div>
+  </section>  <div class="social">
     <a href="#">GitHub</a>
     <a href="#">Twitter</a>
     <a href="#">Discord</a>
   </div>
-
   <footer>
-    <p>&copy; 2025 My GitHub Project. All rights reserved.</p>
-  </footer>
-
-  <script>
+    <p>&copy; 2025 Mina Dev Projects. All rights reserved.</p>
+  </footer>  <script>
     // Countdown Logic
     const countdownEl = document.getElementById("countdown");
     const launchDate = new Date("2025-12-01T00:00:00").getTime();
@@ -190,17 +75,24 @@
       countdownEl.innerHTML = `${days}:${hours}:${minutes}:${seconds}`;
     }, 1000);
 
-    // GitHub API Fetch
-    const username = "mina2357";
-    fetch(`https://api.github.com/users/${username}`)
+    // GitHub Repos Logic
+    fetch('https://api.github.com/users/mina2357/repos?sort=updated')
       .then(res => res.json())
-      .then(data => {
-        document.getElementById("gh-avatar").src = data.avatar_url;
-        document.getElementById("gh-name").textContent = data.name || data.login;
-        document.getElementById("gh-bio").textContent = data.bio || "No bio available.";
-        document.getElementById("gh-repos").textContent = `Repos: ${data.public_repos}`;
-        document.getElementById("gh-followers").textContent = `Followers: ${data.followers}`;
-      });
-  </script>
-</body>
+      .then(repos => {
+        const container = document.getElementById('repo-container');
+        repos.slice(0, 6).forEach(repo => {
+          const card = document.createElement('a');
+          card.href = repo.html_url;
+          card.target = '_blank';
+          card.style = 'display:block; padding:1rem; background:#f7f7f7; border-radius:8px; text-decoration:none; color:#000; box-shadow:0 2px 8px rgba(0,0,0,0.1);';
+          card.innerHTML = `
+            <h3 style="margin-bottom:0.5rem;">${repo.name}</h3>
+            <p style="font-size:0.9rem; margin-bottom:0.5rem; color:#555;">${repo.description || ''}</p>
+            <p style="font-size:0.8rem; color:#888;">⭐ ${repo.stargazers_count} • Forks: ${repo.forks_count}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(console.error);
+  </script></body>
 </html>
